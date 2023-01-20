@@ -1,0 +1,226 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+html, body{
+    height: 100%;
+    line-height: 1;
+}
+ul, a{
+    list-style: none;
+    text-decoration: none;
+    color: black;
+}
+body{
+    font-family: 'Trade Winds', serif;
+    color: black;
+}
+
+
+.wrapper{
+    min-height: 100%;
+    display: grid;
+    grid-template: minmax(64px, auto) auto minmax(370px, auto) / 1fr;
+    grid-template-areas: 
+    "header" 
+    "main" 
+    "footer";
+}
+
+
+/* Начало Header */
+.header{
+    width: 100%;
+    height: 100%;
+    grid-area: header;
+    display: grid;
+    grid-template: 1fr / 1fr 10px minmax(auto,1532px) 10px 1fr;
+    grid-row: 1/2;
+    background-color: #48B620;
+    border-bottom: 4px solid;
+    z-index: 2;
+}
+.header__line{
+    grid-column: 3/4;
+    display: grid;
+    grid-template: 1fr / 150px minmax(auto, 1532px) 130px;
+
+}
+.header__logo{
+    justify-content: space-between;
+    display: grid;
+    grid-column: 1/2;
+    grid-template: 1fr / 47px auto;
+    align-items: center;
+}
+.header__title{
+    font-size: 30px;
+}
+.header__nav{
+    grid-column: 2/3;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    display: grid;
+    grid-template: 1fr / minmax(130px, 300px) minmax(130px, 300px) minmax(130px, 300px);
+    font-size: 26px;
+}
+.header__coin{
+    grid-column: 3/3;
+    align-items: center;
+    display: grid;
+    justify-content: center;
+    grid-template: 1fr / 60px 20px;
+}
+/* Конец Header */
+
+
+/* Начало Page */
+.page{
+    grid-area: main;
+    display: grid;
+    grid-template: 200px 900px 300px / 1fr;
+}
+.page__title{
+    grid-row: 1/2;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    align-items: center;
+    display: grid;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 35px;
+    line-height: 154.52%;
+}
+.page__main{
+    grid-row: 2/3;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+}
+.main__game{
+    width: 1300px;
+    height: 906px;
+    border: 3px solid #000000;
+    border-radius: 40px;
+    display: none;
+    grid-template: 70% 30% / 1fr;
+    justify-items: center;
+    align-items: center;
+    background-color: #48B620;
+}
+.game__symbol{
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    display: grid;
+    justify-items: center;
+}
+.symbol__img.ready{
+    z-index: 6;
+}
+.symbol__img{
+    width: 500px;
+    height: 400px;
+    position: absolute;
+}
+.game__variant{
+    font-size: 58px;
+    width: 100%;
+    height: 100%;
+    font-family: "Inter";
+    display: grid;
+    grid-template: 1fr / 20% 20% 20% 20% 20%;
+    text-align: center;
+    align-items: center;
+    justify-content: space-around;
+}
+.variant__text{
+    cursor: pointer;
+}
+
+.main__test{
+    border: 3px solid #000000;
+    border-radius: 40px;
+    display: grid;
+    grid-template: 70% 30% / 1fr;
+    width: 1300px;
+    height: 100%;
+    justify-items: center;
+    align-items: center;
+    text-align: center;
+    background-color: #48B620;
+}
+.main__img{
+    grid-row: 1/2;
+}
+.main__temple{
+    width: 600px;
+    height: 450px;
+}
+.main__text{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 56px;
+    line-height: 154.52%;
+    align-items: center;
+    justify-content: space-around;
+    grid-template: 1fr / 33% 33% 33%;
+    display: grid;
+    text-align: center;
+    width: 100%;
+    cursor: pointer;
+}
+.page__text{
+    grid-row: 3/3;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 38px;
+    line-height: 154.52%;
+}
+/* Конец Page */
+
+
+/* Начало подвала */
+.footer{
+    position: relative;
+    top: 40px;
+    grid-row: 3/3;
+    grid-area: footer;
+    display: grid;
+    background-color: #000000;
+    color: white;
+    grid-template: 1fr / 1fr 10px minmax(auto, 1500px) 10px 1fr;
+}
+.footer__line{
+    grid-column: 3/4;
+    display: grid;
+    grid-template: 1fr / 270px 50px minmax(auto, 1000px) 50px auto;
+}
+.footer__title{
+    grid-column: 1/2;
+    font-size: 86px;
+    display: grid;
+    align-items: center;
+}
+.footer__sotial{
+    grid-column: 3/4;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
+.footer__contact{
+    grid-column: 6/6;
+    font-size: 35px;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
+/* Конец подвала */

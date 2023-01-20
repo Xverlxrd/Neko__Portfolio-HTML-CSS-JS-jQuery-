@@ -1,0 +1,349 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+html, body{
+    height: 100%;
+    line-height: 1;
+}
+ul, a{
+    list-style: none;
+    text-decoration: none;
+    color: black;
+}
+body{
+    font-family: 'Trade Winds', serif;
+    color: black;
+}
+
+
+.wrapper{
+    min-height: 100%;
+    display: grid;
+    grid-template: minmax(64px, auto) 1fr minmax(370px, auto) / 1fr;
+    grid-template-areas: 
+    "header" 
+    "main" 
+    "footer";
+}
+
+
+/* Начало Header */
+.header{
+    width: 100%;
+    height: 100%;
+    grid-area: header;
+    display: grid;
+    grid-template: 1fr / 1fr 10px minmax(auto,1532px) 10px 1fr;
+    grid-row: 1/2;
+    background-color: #48B620;
+    border-bottom: 4px solid;
+    z-index: 2;
+}
+.header__line{
+    grid-column: 3/4;
+    display: grid;
+    grid-template: 1fr / 150px minmax(200px, 1532px) 40px;
+
+}
+.header__logo{
+    justify-content: space-between;
+    display: grid;
+    grid-column: 1/2;
+    grid-template: 1fr / 47px auto;
+    align-items: center;
+}
+.header__title{
+    font-size: 30px;
+}
+.header__profile{
+    grid-column: 3/3;
+    position: relative;
+}
+.profile__logo{
+    width: 40px;
+    height: 40px;
+    background-color: black;
+    border-radius: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+}
+/* Конец Header */
+
+
+/* Начало Form */
+.form{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+    display: block;
+}
+.form__main{
+    width: 400px;
+    height: 240px;
+    border: 2px solid;
+    background-color: white;
+    display: grid;
+    margin: 0 auto;
+    border-radius: 20px;
+    grid-template: 1fr / 45% 10% 45%;
+    align-items: center;
+    top: 3px;
+    position: relative;
+}
+.form__regist{
+    height: 100%;
+    text-align: center;
+    align-items: center;
+    justify-items: center;
+    grid-column: 1/2;
+    display: grid;
+    grid-template: 20% 20% 20% 20% 20%/ 1fr;
+   
+}
+.regist__title, .login__title{
+    font-size: 30px;
+    font-family: "Inter";
+}
+.form__regist > input, .form__login > input{
+    height: 30px;
+    width: 150px;
+}
+.regist__send{
+    width: 100px;
+    height: 40px;
+    background-color: #48B620;
+    border: 0px;
+    border-radius: 3%;
+}
+
+.form__login{
+    grid-column: 3/3;
+    height: 100%;
+    display: grid;
+    grid-template: 20% 20% 20% 20% 20% / 1fr;
+    text-align: center;
+    align-items: center;
+    justify-items: center;
+}
+.login__send{
+    grid-row: 5/5;
+    border-radius: 3%;
+    width: 100px;
+    height: 40px;
+    background-color: #48B620;
+    border: 0px;
+}
+/* Конец Form */
+
+
+/* Начало Page */
+.page{
+    grid-area: main;
+    display: grid;
+    grid-template: 900px 413px 800px 1130px/ 1fr;
+
+}
+
+
+/* Начало Page__main */
+.main{
+    background-color: #48B620;
+}
+.main__content{
+    grid-row: 1/2;
+    display: grid;
+    grid-template: 130px auto / 1fr;
+}
+.main__block{
+    grid-row: 2/2;
+    display: grid;
+    grid-template: 1fr / 1fr 10px minmax(auto, 500px) 100px minmax(100px, 1032px) 10px 1fr;
+}
+.main__img{
+    grid-column: 3/4;
+    display: grid;
+    grid-template: 400px 120px / 1fr;
+}
+.main__temple{
+    width: 500px;
+    height: 400px;
+}
+.main__button{
+    width: 400px;
+    height: 120px;
+    background: #5EDA31;
+    border: 3px solid #000000;
+    box-shadow: 14px 17px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 30px;
+    font-size: 35px;
+    position:relative;
+    left: 40px;
+    top: 0px;
+}
+.main__title{
+    grid-column: 5/6;
+    font-weight: 400;
+    font-size: 34px;
+    line-height: 154.52%;
+    align-items: center;
+    display: grid;
+    justify-content: center;
+    grid-template: 300px auto / 1fr;
+}
+.main__text{
+    display: grid;
+    max-height: 330px;
+    justify-content: center;
+}
+/* Конец Page__main */
+
+
+/* Начало Slider */
+.page__slider{
+    border-top: 5px solid;
+    border-bottom: 5px solid;
+    display: grid;
+    grid-row: 2/3;
+    grid-template: 1fr / 1fr 10px minmax(auto, 1500px) 10px 1fr;
+}
+.slider__help{
+    grid-column: 3/4;
+}
+.help__img {
+    display: grid;
+    position: absolute;
+    grid-template: 1fr / minmax(auto, 500px) minmax(auto, 1032px);
+    justify-items: center;
+    align-items: center;
+    height: 400px;
+    
+}
+.help__img.currect{
+    display: grid;
+    grid-template: 1fr / minmax(auto, 500px) minmax(auto, 1032px);
+    justify-items: center;
+    align-items: center;
+    height: 400px;
+}
+.help__logo{
+    grid-column: 1/2;
+}
+.help__text{
+    grid-column: 2/2;
+    font-weight: 400;
+    font-size: 34px;
+    line-height: 154.52%;
+}
+/* Конец Slider */
+
+
+/* Начало Plus */
+.page__plus{
+    display: grid;
+    grid-row: 3/3;
+    background-color: #48B620;
+    grid-template: 1fr / 1fr 10px minmax(auto,177px) minmax(100px, auto) minmax(auto, 690px) minmax(auto, 400px) 10px 1fr;
+}
+.plus__img{
+    grid-column: 3/4;
+    align-items: center;
+    display: grid;
+    grid-template: auto auto auto / 1fr;
+}
+.plus__text{
+    grid-column: 5/6;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    display: grid;
+    grid-template: 124px 115px 115px;
+}
+.plus__gif{
+    grid-column: 6/7;
+    align-items: center;
+    justify-items: center;
+    display: grid;
+}
+.plus__gif_img{
+    width: 400px;
+    height: 300px;
+}
+/* Конец Plus */
+
+
+/* Начало Premium */
+.page__premium{
+    display: grid;
+    grid-row: 4/4;
+    grid-template: minmax(50px, 350px) auto / 1fr;
+    background-color: #48B620;
+}
+.premium__title{
+    grid-row: 1/2;
+    align-items: center;
+    display: grid;
+    grid-template: 1fr / 1fr 10px minmax(100px, auto) 10px 1fr;
+    font-size: 40px;
+}
+.premium__main{
+    grid-row: 2/2;
+    display: grid;
+    grid-template: 1fr / 1fr 10px 350px minmax(100px, auto) 10px 1fr;
+}
+.premium__img{
+    grid-template: 189px 189px 189px;
+    display: grid;
+    grid-column: 3/4;
+    align-items: center;
+    
+}
+.premium__text{
+    display: grid;
+    align-items: center;
+    grid-column: 4/5;
+    font-size: 35px;
+    line-height: 154.52%;
+}
+/* Конец Premium */
+/* Конец Main */
+
+
+/* Начало подвала */
+.footer{
+    grid-row: 3/3;
+    display: grid;
+    background-color: #000000;
+    color: white;
+    grid-template: 1fr / 1fr 10px minmax(auto, 1500px) 10px 1fr;
+}
+.footer__line{
+    grid-column: 3/4;
+    display: grid;
+    grid-template: 1fr / 270px 50px minmax(auto, 1000px) 50px auto;
+}
+.footer__title{
+    grid-column: 1/2;
+    font-size: 86px;
+    display: grid;
+    align-items: center;
+}
+.footer__sotial{
+    grid-column: 3/4;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
+.footer__contact{
+    grid-column: 6/6;
+    font-size: 35px;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
+/* Конец подвала */
